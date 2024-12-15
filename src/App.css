@@ -1,0 +1,155 @@
+/* App.css */
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #333; /* Default text color */
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1d4ed8; /* Tailwind's blue-600 */
+}
+
+/* Wrapper */
+.TodoWrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.ToDoForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+  border-radius: 0.375rem 0 0 0.375rem;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-input:focus {
+  border-color: #3b82f6; /* Tailwind's blue-500 */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.todo-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.375rem 0.375rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-btn:hover {
+  background-color: #2563eb; /* Tailwind's blue-700 */
+}
+
+/* Task list styles */
+.Todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f9fafb; /* Tailwind's gray-50 */
+  border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.Todo:hover {
+  background-color: #f3f4f6; /* Slight hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Todo p {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Todo p.Completed {
+  text-decoration: line-through;
+  color: #9ca3af; /* Tailwind's gray-400 */
+}
+
+/* Icon styles */
+.Todo div svg {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.Todo div svg:hover {
+  color: #1d4ed8; /* Tailwind's blue-600 */
+}
+
+.Todo div svg:last-child:hover {
+  color: #ef4444; /* Tailwind's red-500 */
+}
+
+/* Edit Form styles */
+.EditToDoForm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.EditToDoForm input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem 0 0 0.375rem;
+  font-size: 1rem;
+}
+
+.EditToDoForm button {
+  background-color: #10b981; /* Tailwind's green-500 */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.375rem 0.375rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.EditToDoForm button:hover {
+  background-color: #059669; /* Tailwind's green-600 */
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.rounded-lg {
+  border-radius: 0.375rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
