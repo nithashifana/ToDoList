@@ -1,32 +1,34 @@
-/* App.css */
-
-/* General styles */
+/* General Styles */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f3f4f6; /* Light gray background */
-  color: #333; /* Default text color */
-  line-height: 1.6;
+  background: #000000; /* Solid black background */
+  color: #ffffff; /* White text */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Headings */
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #1d4ed8; /* Tailwind's blue-600 */
+  margin-bottom: 2rem;
+  color: #ffffff; /* White text */
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #cccccc; /* Subtle glow */
 }
 
 /* Wrapper */
 .TodoWrapper {
   max-width: 600px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #1a1a1a; /* Dark gray for contrast */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
 }
 
-/* Form styles */
+/* Form Styles */
 .ToDoForm {
   display: flex;
   gap: 0.5rem;
@@ -35,80 +37,87 @@ h1 {
 
 .todo-input {
   flex: 1;
-  padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db; /* Tailwind's gray-300 */
-  border-radius: 0.375rem 0 0 0.375rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
   font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+  background: #333333; /* Dark gray input field */
+  color: #ffffff; /* White text */
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1); /* Subtle inner glow */
+  transition: all 0.3s ease;
 }
 
 .todo-input:focus {
-  border-color: #3b82f6; /* Tailwind's blue-500 */
   outline: none;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #bbbbbb; /* White glow on focus */
 }
 
 .todo-btn {
-  background-color: #3b82f6;
-  color: #fff;
-  padding: 0.5rem 1rem;
+  background: #ffffff; /* White button */
+  color: #000000; /* Black text */
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0 0.375rem 0.375rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .todo-btn:hover {
-  background-color: #2563eb; /* Tailwind's blue-700 */
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8); /* White glow on hover */
 }
 
-/* Task list styles */
+/* Task List Styles */
 .Todo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
-  background: #f9fafb; /* Tailwind's gray-50 */
-  border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
-  border-radius: 0.375rem;
-  margin-bottom: 0.5rem;
-  transition: all 0.2s ease-in-out;
+  padding: 1rem;
+  background: #1a1a1a; /* Dark gray for task cards */
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Subtle dark shadow */
 }
 
 .Todo:hover {
-  background-color: #f3f4f6; /* Slight hover effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* White shadow on hover */
 }
 
 .Todo p {
   flex: 1;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  color: #ffffff; /* White text */
 }
 
 .Todo p.Completed {
   text-decoration: line-through;
-  color: #9ca3af; /* Tailwind's gray-400 */
+  color: #999999; /* Light gray for completed tasks */
 }
 
-/* Icon styles */
+/* Icons */
 .Todo div svg {
   cursor: pointer;
   margin-left: 0.5rem;
-  transition: color 0.2s ease-in-out;
+  color: #ffffff; /* White icons */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .Todo div svg:hover {
-  color: #1d4ed8; /* Tailwind's blue-600 */
+  transform: scale(1.2);
+  color: #bbbbbb; /* Light gray on hover */
 }
 
 .Todo div svg:last-child:hover {
-  color: #ef4444; /* Tailwind's red-500 */
+  color: #ff0000; /* Red for delete icon hover */
 }
 
-/* Edit Form styles */
+/* Edit Form */
 .EditToDoForm {
   display: flex;
   gap: 0.5rem;
@@ -116,25 +125,29 @@ h1 {
 
 .EditToDoForm input {
   flex: 1;
-  padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem 0 0 0.375rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
   font-size: 1rem;
+  background: #333333; /* Dark gray for input field */
+  color: #ffffff; /* White text */
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 .EditToDoForm button {
-  background-color: #10b981; /* Tailwind's green-500 */
-  color: #fff;
-  padding: 0.5rem 1rem;
+  background: #ffffff; /* White button */
+  color: #000000; /* Black text */
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0 0.375rem 0.375rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .EditToDoForm button:hover {
-  background-color: #059669; /* Tailwind's green-600 */
+  background: #f5f5f5; /* Lighter white on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow */
 }
 
 /* Utilities */
@@ -147,9 +160,9 @@ h1 {
 }
 
 .rounded-lg {
-  border-radius: 0.375rem;
+  border-radius: 0.75rem;
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
